@@ -188,7 +188,8 @@ module.exports = function (grunt) {
         // Process includes
         contents = include(contents, path.dirname(src))
 
-        var dest = config.dest
+		var dest = config.orig.dest
+
 
         if (grunt.file.isDir(dest) && !config.orig.cwd) {
           dest = path.join(dest, src)
